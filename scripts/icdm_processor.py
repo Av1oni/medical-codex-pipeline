@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-input_file = Path("../input/icd10cm_raw.csv")
-df = pd.read_csv(input_file)
+Input_file = Path("../input/icd10cm_order_2025.x")
+df = pd.read_csv(Input_file)
 
 df['code'] = df['code'].str.strip()
 df['description'] = df['description'].str.strip() 
