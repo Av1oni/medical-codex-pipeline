@@ -84,3 +84,31 @@ This course assumes basic familiarity with:
 - **Memory Issues**: Large CSV files may require chunked processing in Python
 - **Encoding Problems**: Medical data often uses different character encodings (UTF-8, Latin-1)
 
+-----------------------------------------------------------------------------
+# Step one
+I created all my folders and downloaded the files i have access to through the links on your github
+
+# 2
+I then started with the ICD10 codes and I had a text file in my input and used the startup codes given to me to clean it and convert it to a csv file in the output folder.
+
+# 3 
+Looking at icd10cm_processor.py I imported the path of the orginal txt file
+
+# 4 
+Wrote a Python script process_codexes.py that:
+1) Reads each file with pandas (read_csv for ICD, read_fwf for HCPCS).
+2) Cleans whitespace and removes duplicate rows.
+3) Saves the cleaned data to output/csv/ as CSV files.
+
+# 5 
+I then tested the pipeline by running the script and confirming that CSV files were generated in the output\csv file that I have
+
+# 6 
+When I was downloading the npi files the biggest one was already a csv file and I had some trouble figuring out what to do because when i clicked on it on input it said the file is too large to display in text.
+
+# 7
+The Npi keeps force shutting down my code so I will leave this as the last thing I do (it shut it down 3 times)
+
+# 8
+I finished my codes for each of the processor scripts however I keep getting an error saying no module named ... so I will submit this and update the git link when i figure out what is wrong
+ 
