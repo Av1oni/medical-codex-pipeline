@@ -13,7 +13,7 @@ colspecs = [(0, 11), (11, 90), (90, 180), (180, 200), (200, 220), (220, 240), (2
 column_names = [
     "Code", "Description1", "Description2", "Type", "Unknown1", "Unknown2", "Unknown3", "Unknown4"
 ]
-df = pd.read_fwf('C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\HCPC2025_OCT_ANWEB_v3.txt', colspecs=colspecs, names=column_names)
+df = pd.read_fwf(r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\HCPC2025_OCT_ANWEB_v3.txt", colspecs=colspecs, names=column_names)
 
 
 ## save as csv to Module1_MedicalCodexes/hcpcs/output

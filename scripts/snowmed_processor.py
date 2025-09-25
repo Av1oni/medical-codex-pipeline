@@ -1,33 +1,34 @@
 import polars as pl
+import pandas as pd
 from pathlib import Path
 
-file_path = Path(r'C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\sct2_Relationship_Snapshot_US1000124_20250901.txt')
+file_path = Path(r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\sct2_Relationship_Snapshot_US1000124_20250901.txt")
 
-df = pl.read_csv(
+df = pd.read_csv(
     file_path,
-    separator='\t',
-    has_header=True,
-    quote_char=None,
-    encoding='utf8-lossy',
-    truncate_ragged_lines=True,
-    dtypes={
-        'id': pl.Utf8,
-        'effectiveTime': pl.Utf8,
-        'active': pl.Int32,
-        'moduleId': pl.Utf8,
-        'conceptId': pl.Utf8,
-        'languageCode': pl.Utf8,
-        'typeId': pl.Utf8,
-        'term': pl.Utf8,
-        'caseSignificanceId': pl.Utf8
-    }
+    #separator='\t',
+    #has_header=True,
+    #quote_char=None,
+    #encoding='utf8-lossy',
+    #truncate_ragged_lines=True,
+    #dtypes={
+        #'id': pl.Utf8,
+        #'effectiveTime': pl.Utf8,
+        #'active': pl.Int32,
+        #'moduleId': pl.Utf8,
+        #'conceptId': pl.Utf8,
+        #'languageCode': pl.Utf8,
+        #'typeId': pl.Utf8,
+        #'term': pl.Utf8,
+        #'caseSignificanceId': pl.Utf8
+    #}
 )
 
-output_dir = Path('C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\snowmed')
+output_dir = Path(r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\snowmed")
 output_dir.mkdir(exist_ok=True)
 output_path = output_dir / 'sct2_Description_Full.csv'
 
-df.write_csv(output_path)
+df.to_csv(output_path)
 
 print(f"Successfully parsed {len(df)} records from SNOMED CT file")
 print(f"Saved to {output_path}")
@@ -35,7 +36,7 @@ print(f"Dataset shape: {df.shape}")
 print(f"\nColumn names: {df.columns}")
 print(f"\nFirst 5 rows:")
 print(df.head())
-print(f"\nMemory usage (MB): {df.estimated_size() / 1024**2:.2f}")
+#print(f"\nMemory usage (MB): {df.estimated_size() / 1024**2:.2f}")
 
-print(f"\nActive terms count: {df.filter(pl.col('active') == 1).height}")
-print(f"Language codes: {df['languageCode'].unique().to_list()}")
+#print(f"\nActive terms count: {df.filter(pl.col('active') == 1).height}")
+#print(f"Language codes: {df['languageCode'].unique().to_list()}")

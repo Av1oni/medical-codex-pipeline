@@ -3,6 +3,7 @@
 
 # Ignore the sqlite db
 example.db
+patients.db
 *.txt
 *.csv
 *.parquet

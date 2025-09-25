@@ -1,7 +1,7 @@
 import pandas as pd 
 
 ## Input/Loinc.csv
-loinc = pd.read_csv('C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\Loinc.csv')
+loinc = pd.read_csv(r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\Input\Loinc.csv")
 
 ### Info to describe 
 loinc.info()
@@ -30,8 +30,8 @@ loinc_small = loinc_small.rename(columns={
     'LONG_COMMON_NAME': 'description',
 })
 
-file_output_path = 'C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv'
+file_output_path = r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv"
 
-loinc_small.to_csv('C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv')
+#loinc_small.to_csv("C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv")
 
-loinc_small.to_csv('C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv', index=False)
+loinc_small.to_csv(r"C:\Users\antho\Downloads\HHA 507\HHA-507-2025\assignments\medical-codex-pipeline\output\lonic_small.csv", index=False)
