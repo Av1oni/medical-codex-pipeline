@@ -7,6 +7,15 @@ patients.db
 *.txt
 *.csv
 *.parquet
+Input\der2_cRefset_AttributeValueFull_US1000124_20250901.txt
+Input\icd102019syst_codes.txt
+Input\HCPC2025_OCT_ANWEB_v3.txt
+Input\icd10cm_order_2025.txt
+Input\Loinc.csv
+Input\npidata_pfile_20050523-20250907.csv
+Input\RXNSAT.RRF
+Input\sct2_Relationship_Snapshot_US1000124_20250901.txt
+
 
 # Datasets
 Module1_MedicalCodexes/loinc/Loinc.csv
